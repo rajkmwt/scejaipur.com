@@ -250,3 +250,16 @@ nav a:hover {
     }
 
 }
+.instagram-link {
+    margin-top: 15px;
+}
+
+.instagram-link img {
+    width: 28px;
+    height: 28px;
+    transition: 0.3s;
+}
+
+.instagram-link img:hover {
+    transform: scale(1.1);
+}

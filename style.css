@@ -223,3 +223,30 @@ nav a:hover {
     font-size: 14px;
     background: #111;
 }
+
+/* MOBILE FIX */
+
+@media (max-width: 768px) {
+
+    .slider {
+        height: 70vh;
+    }
+
+    .slider-overlay h1 {
+        font-size: 32px;
+    }
+
+    .slider-overlay p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none; /* optional: hide nav on mobile for now */
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+}

@@ -10,11 +10,11 @@ body {
     color: #222;
 }
 
-/* Navigation */
+/* Header */
 
 header {
     background: #ffffff;
-    padding: 15px 0;
+    padding: 12px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,10 +34,30 @@ header {
     align-items: center;
 }
 
+/* Logo */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    height: 55px;
+}
+
+.tagline {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* Navigation */
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
@@ -45,6 +65,7 @@ nav a {
     color: #333;
     font-weight: 600;
     font-size: 14px;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -55,13 +76,13 @@ nav a:hover {
 
 .hero {
     height: 100vh;
-    background: url("images/logo.jpg") center/cover no-repeat;
-    margin-top: 70px;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    margin-top: 80px;
     position: relative;
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     height: 100%;
     display: flex;
     align-items: center;

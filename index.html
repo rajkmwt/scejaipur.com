@@ -22,12 +22,26 @@
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
+<!-- SLIDER SECTION -->
+
+<section class="slider">
+
+    <div class="slides">
+        <img src="images/completedprojects1.jpg" class="slide active">
+        <img src="images/completedprojects2.jpg" class="slide">
+        <img src="images/completedprojects3.jpg" class="slide">
+        <img src="images/completedprojects4.jpg" class="slide">
+        <img src="images/completedprojects5.jpg" class="slide">
+        <img src="images/completedprojects6.jpg" class="slide">
+        <img src="images/completedprojects7.jpg" class="slide">
+    </div>
+
+    <div class="slider-overlay">
         <h1>The Construction People</h1>
         <p>Building high-quality residential & commercial projects across Jaipur.</p>
         <a href="#contact" class="btn">Get a Quote</a>
     </div>
+
 </section>
 
 <section id="about" class="section">
@@ -66,10 +80,10 @@
     <div class="container">
         <h2>Recent Projects</h2>
         <div class="grid-4">
-            <img src="images/Project1.jpg" alt="Akshat Durlabh">
-            <img src="images/Project2.jpg" alt="Akshat Skyhomes">
-            <img src="images/Project3.jpg" alt="Akshat Kanota Estate">
-            <img src="images/Project4.jpg" alt="Akshat Retreat">
+            <img src="images/Project1.jpg" alt="">
+            <img src="images/Project2.jpg" alt="">
+            <img src="images/Project3.jpg" alt="">
+            <img src="images/Project4.jpg" alt="">
         </div>
     </div>
 </section>
@@ -91,16 +105,6 @@
             <img src="images/logo.png" alt="SCE Logo" class="footer-logo">
             <h3>CALL US TODAY</h3>
             <p>+91 8290941511</p>
-
-            <div class="social">
-                <span>Follow Us:</span>
-                <div class="social-icons">
-                    <a href="#">F</a>
-                    <a href="#">I</a>
-                    <a href="#">T</a>
-                    <a href="#">L</a>
-                </div>
-            </div>
         </div>
 
         <div class="footer-links">
@@ -127,6 +131,21 @@
         © 2026 Shree Contractors & Engineers | The Construction People
     </div>
 </footer>
+
+<!-- SLIDER SCRIPT -->
+
+<script>
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+
+    function nextSlide() {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+    }
+
+    setInterval(nextSlide, 4000);
+</script>
 
 </body>
 </html>

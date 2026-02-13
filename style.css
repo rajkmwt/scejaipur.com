@@ -139,3 +139,14 @@ footer {
     color: #fff;
     font-size: 14px;
 }
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.grid-4 img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}

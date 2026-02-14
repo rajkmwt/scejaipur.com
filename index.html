@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Shree Contractors & Engineers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Oswald Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,7 +41,9 @@
     </div>
 
     <div class="slider-overlay">
-        <h1>The Construction People</h1>
+        <h1 style="font-family: 'Oswald', sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:1px;">
+            The Construction People
+        </h1>
         <p>Building high-quality residential & commercial projects across Jaipur.</p>
         <a href="#contact" class="btn">Get a Quote</a>
     </div>
@@ -46,16 +52,21 @@
 
 <section id="about" class="section">
     <div class="container narrow">
-        <h2>About Us</h2>
-        <p>
-            Shree Contractors & Engineers is a Jaipur-based construction company 
-            led by
-            <strong>Mr. Ramswaroop Kumawat</strong>.
-            We specialize in delivering 
-            reliable residential and commercial construction projects with engineering 
-            precision, quality materials, and on-time execution.
-        </p>
-    </div>
+        <div style="text-align: center;">
+    <p>
+        Shree Contractors & Engineers is a Jaipur-based construction company led by
+    </p>
+
+    <p>
+        <strong>Mr. Ramswaroop Kumawat</strong>
+    </p>
+
+    <p>
+        We specialize in delivering reliable residential and commercial construction 
+        projects with engineering precision, quality materials, and on-time execution.
+    </p>
+</div>
+
 </section>
 
 <section id="services" class="section grey">
@@ -104,17 +115,16 @@
     <div class="container footer-grid">
 
         <div class="footer-left">
-    <img src="images/logo.png" alt="SCE Logo" class="footer-logo">
-    <h3>CALL US TODAY</h3>
-    <p>+91 8290941511</p>
+            <img src="images/logo.png" alt="SCE Logo" class="footer-logo">
+            <h3>CALL US TODAY</h3>
+            <p>+91 8290941511</p>
 
-    <div class="instagram-link">
-        <a href="https://www.instagram.com/scejaipur" target="_blank">
-            <img src="images/ig.png" alt="Instagram">
-        </a>
-    </div>
-</div>
-
+            <div class="instagram-link">
+                <a href="https://www.instagram.com/scejaipur" target="_blank">
+                    <img src="images/ig.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
 
         <div class="footer-links">
             <h3>Quick Links</h3>
@@ -140,8 +150,6 @@
         © 2026 Shree Contractors & Engineers | The Construction People
     </div>
 </footer>
-
-<!-- SLIDER SCRIPT -->
 
 <script>
     const slides = document.querySelectorAll(".slide");

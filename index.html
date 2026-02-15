@@ -20,7 +20,7 @@
 
         <!-- LOGO (Redirects to main domain root) -->
         <a href="/">
-            <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo">
+            <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo" id="logo">
         </a>
 
 
@@ -290,13 +290,19 @@
 
     // HEADER CHANGE ON SCROLL
     window.addEventListener("scroll", function() {
-        const header = document.getElementById("header");
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
-        }
-    });
+
+    const header = document.getElementById("header");
+    const logo = document.getElementById("logo");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+        logo.src = "uploads/images/logo.png";   // logo after scroll
+    } else {
+        header.classList.remove("scrolled");
+        logo.src = "uploads/images/logo3.png";  // default transparent logo
+    }
+
+});
 
 </script>
 

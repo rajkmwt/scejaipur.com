@@ -39,7 +39,7 @@ header.scrolled {
 }
 
 .logo {
-    height: 42px;
+    height: 55px;
 }
 
 /* ===== NAVIGATION ===== */
@@ -269,21 +269,41 @@ header.scrolled .menu-toggle span {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 40px;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 .footer-logo {
-    height: 60px;
+    height: 85px;   /* final size */
     margin-bottom: 20px;
 }
 
 .footer-col h3 {
-    color: white;
+    color: #fff;
     margin-bottom: 15px;
 }
 
 .footer-col p {
     margin-bottom: 8px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d66d00;
 }
 
 .social-icon {
@@ -293,10 +313,11 @@ header.scrolled .menu-toggle span {
 
 .footer-bottom {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     background: #111;
     font-size: 14px;
 }
+
 
 
 /* ================= RESPONSIVE ================= */

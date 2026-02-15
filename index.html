@@ -1,286 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shree Contractors & Engineers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Shree Contractors & Engineers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
-    <!-- Oswald for hero heading -->
-    <!-- Poppins for navigation -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header>
-    <div class="nav container">
+<header id="header">
+<div class="nav container">
 
-        <!-- LOGO IMAGE PATH -->
-        <!-- Change logo here: images/logo.png -->
-        <img src="uploads/images/logo.png" alt="SCE Logo" class="logo">
+<img src="logo2.png" alt="SCE Logo" class="logo">
 
-        <!-- NAVIGATION -->
-        <nav>
-            <a href="#about">ABOUT US</a>
-            <a href="#services">SERVICES</a>
-            <a href="#projects">OUR PROJECTS</a>
-            <a href="#clients">CLIENTS</a>
-            <a href="#contact">CONTACT US</a>
-        </nav>
+<div class="menu-toggle" id="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
 
-    </div>
+<nav id="nav-menu">
+<a href="#about">ABOUT US</a>
+<a href="#services">SERVICES</a>
+<a href="#projects">OUR PROJECTS</a>
+<a href="#clients">CLIENTS</a>
+<a href="#contact">CONTACT US</a>
+</nav>
+
+</div>
 </header>
 
 
 <!-- ================= HOME SLIDER ================= -->
 <section class="slider">
+<div class="slides">
+<img src="uploads/images/slider1.jpg" class="slide active">
+<img src="uploads/images/slider2.jpg" class="slide">
+<img src="uploads/images/slider3.jpg" class="slide">
+<img src="uploads/images/slider4.jpg" class="slide">
+<img src="uploads/images/slider5.jpg" class="slide">
+<img src="uploads/images/slider6.jpg" class="slide">
+<img src="uploads/images/slider7.jpg" class="slide">
+<img src="uploads/images/slider8.jpg" class="slide">
+</div>
 
-    <!-- SLIDE IMAGES -->
-    <!-- Change images inside images/ folder -->
-    <div class="slides">
-        <img src="uploads/images/slider1.jpg" class="slide active">
-        <img src="uploads/images/slider2.jpg" class="slide">
-        <img src="uploads/images/slider3.jpg" class="slide">
-        <img src="uploads/images/slider4.jpg" class="slide">
-        <img src="uploads/images/slider5.jpg" class="slide">
-        <img src="uploads/images/slider6.jpg" class="slide">
-        <img src="uploads/images/slider7.jpg" class="slide">
-        <img src="uploads/images/slider8.jpg" class="slide">
-    </div>
-
-    <!-- Overlay Content -->
-    <div class="overlay">
-        <h1>"The Construction People"</h1>
-        <p>Building high-quality residential & commercial projects across Jaipur.</p>
-        <a href="#contact" class="btn">Get a Quote</a>
-    </div>
-
+<div class="overlay">
+<h1>"The Construction People"</h1>
+<p>Building high-quality residential & commercial projects across Jaipur.</p>
+<a href="#contact" class="btn">Get a Quote</a>
+</div>
 </section>
 
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-    <div class="container center narrow">
-        <p>Shree Contractors & Engineers is a Jaipur-based construction company led by</p>
-        <p><strong>Mr. Ramswaroop Kumawat</strong></p>
-        <p>We deliver reliable residential and commercial projects with engineering precision and on-time execution.</p>
-    </div>
-</section>
-
-
-<!-- ================= WHY CHOOSE US ================= -->
-<section class="section grey">
-    <div class="container center">
-        <h2>Why Choose Us</h2>
-
-        <div class="grid-3">
-            <div class="card">
-                <h3>Quality Materials</h3>
-                <p>We use certified materials ensuring long-lasting strength.</p>
-            </div>
-
-            <div class="card">
-                <h3>On-Time Delivery</h3>
-                <p>Projects completed within committed timelines.</p>
-            </div>
-
-            <div class="card">
-                <h3>Engineering Precision</h3>
-                <p>Structural safety and detailed supervision at every stage.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section">
-    <div class="container">
-        <h2>Our Services</h2>
-
-        <div class="grid-3">
-            <div class="card">
-                <h3>Residential Construction</h3>
-                <p>Independent houses and villas built with durability.</p>
-            </div>
-
-            <div class="card">
-                <h3>Commercial Projects</h3>
-                <p>Office buildings and commercial complexes.</p>
-            </div>
-
-            <div class="card">
-                <h3>Renovation & Structural Work</h3>
-                <p>Structural upgrades and remodeling projects.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- ================= PROJECTS HERO SECTION ================= -->
-
-<section class="projects-hero">
-
-    <!-- Background Image Path -->
-    <!-- Change here: images/projects-bg.jpg -->
-    <div class="projects-overlay">
-        <h1>Completed Projects</h1>
-        <p>Scroll down to explore our recent achievements</p>
-    </div>
-
-</section>
-
-
-
-<!-- ================= PROJECT CARDS SECTION ================= -->
-
-<section id="projects" class="projects-section">
-
-    <div class="container">
-
-        <div class="projects-grid">
-
-            <!-- PROJECT 1 -->
-            <!-- Image Path: images/project1.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project1.jpg" alt="Project 1">
-                <h3>BAGAI APARTMENTS</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 2 -->
-            <!-- Image Path: images/project2.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project2.jpg" alt="Project 2">
-                <h3>ARL INFRATECH</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 3 -->
-            <!-- Image Path: images/project3.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project3.jpg" alt="Project 3">
-                <h3>AKSHAT DURLABH</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 4 -->
-            <!-- Image Path: images/project4.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project4.jpg" alt="Project 4">
-                <h3>AKSHAT SKY-HOMES</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 5 -->
-            <!-- Image Path: images/project5.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project5.jpg" alt="Project 5">
-                <h3>AKSHAT MEADOWS</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 6 -->
-            <!-- Image Path: images/project6.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project6.jpg" alt="Project 6">
-                <h3>SPECTA QUARTZ SURFACES</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 7 -->
-            <!-- Image Path: images/project7.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project7.jpg" alt="Project 7">
-                <h3>AKSHAT ANUGRAH</h3>
-                <p>N/A.</p>
-            </div>
-
-            <!-- PROJECT 8 -->
-            <!-- Image Path: images/project8.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project8.jpg" alt="Project 8">
-                <h3>AKSHAT RETREAT</h3>
-                <p>N/A.</p>
-            </div>
-
-            
-            <!-- PROJECT 9 -->
-            <!-- Image Path: images/project9.jpg -->
-            <div class="project-card">
-                <img src="uploads/images/project9.jpg" alt="Project 9">
-                <h3>SHUBHASHISH GEETA</h3>
-                <p>N/A.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-
-<!-- ================= CLIENTS ================= -->
+<!-- ================= CLIENTS (MOVED HERE) ================= -->
 <section id="clients" class="section">
-    <div class="container center">
-        <h2>Our Clients</h2>
-
-        <!-- Replace these with real client logos -->
-        <!-- Example path: images/client1.png -->
-        <div class="clients">
-            <img src="uploads/images/client1.png" alt="Client Logo">
-            <img src="uploads/images/client2.png" alt="Client Logo">
-            <img src="uploads/images/client3.png" alt="Client Logo">
-            <img src="uploads/images/client4.png" alt="Client Logo">
-            <img src="uploads/images/client5.png" alt="Client Logo">
-            <img src="uploads/images/client6.png" alt="Client Logo">
-            <img src="uploads/images/client7.png" alt="Client Logo">
-            <img src="uploads/images/client8.png" alt="Client Logo">
-            <img src="uploads/images/client9.png" alt="Client Logo">
-            <img src="uploads/images/client10.png" alt="Client Logo">
-        </div>
-    </div>
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section dark">
-    <div class="container center narrow">
-        <h2>Contact Us</h2>
-        <p><strong>Director:</strong> Mr. Ramswaroop Kumawat</p>
-        <p><strong>Email:</strong> rskhoraniya@gmail.com</p>
-        <p><strong>Phone:</strong> +91 8290941511</p>
-        <p>Jaipur, Rajasthan</p>
-    </div>
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    © 2026 Shree Contractors & Engineers
-</footer>
-
-
-<!-- ================= RIGHT TO LEFT SLIDER SCRIPT ================= -->
-<script>
-    const slides = document.querySelectorAll(".slide");
-    let current = 0;
-
-    function nextSlide() {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-    }
-
-    setInterval(nextSlide, 4000);
-</script>
-
-</body>
-</html>
+<div class="container center">
+<h2>Our Clients</h2>
+<div class="clients">
+<img src="uploads/images/client1.png">
+<img src="uploads/images/client2.png">
+<img src="uploads/images/client3.png">
+<img src="uploads/images/client4.png">
+<img src="uploads/images/client5.png">
+<img src="uploads/images/client6.png">
+<img src="uploads/images/client7.png">
+<img src="uploads/images/client8.png">
+<img src="uploads/images/client9.png">
+<img src="uploads/images/client10.png">
+</div>
+</div>
+</section

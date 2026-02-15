@@ -1,67 +1,58 @@
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* smooth scroll */
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #8c4900;
-    background: #fff;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.narrow {
-    max-width: 700px;
-}
-
-/* HEADER */
-
+/* ===== HEADER (Sticky + Reduced Height) ===== */
 header {
-    width: 100%;
+    position: sticky;   /* makes header stick */
+    top: 0;
+    z-index: 1000;
     background: #fff;
-    border-bottom: 1px solid #d66d00;
-    position: relative;
-    z-index: 10;
+    border-bottom: 1px solid #ddd;
 }
 
-/* FULL WIDTH NAV (NOT CENTERED) */
+/* Reduced height here */
 .nav {
-    width: 100%;
-    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 40px;  /* reduced height */
 }
 
-.logo img {
-    height: 55px;
+.logo {
+    height: 42px;  /* logo size */
 }
 
+/* Navigation style */
 nav {
     display: flex;
-    gap: 35px;
+    gap: 30px;
 }
 
+/* Poppins SemiBold, ALL CAPS, Bold */
 nav a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
     text-decoration: none;
     color: #111;
-    font-weight: 600;
-    font-size: 15px;
 }
 
-nav a:hover {
-    color: #d66d00;
-}
 
-/* SLIDER */
-
+/* ===== SLIDER (Right to Left Animation) ===== */
 .slider {
     position: relative;
     height: 90vh;
@@ -69,73 +60,54 @@ nav a:hover {
 }
 
 .slides {
+    display: flex;
     height: 100%;
-    width: 100%;
 }
 
 .slide {
-    position: absolute;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+    left: 100%;
 }
 
 .slide.active {
-    opacity: 1;
+    left: 0;
 }
 
 /* Overlay */
-
-.slider-overlay {
+.overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,0.6);
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    z-index: 2;
 }
 
-.slider-overlay h1 {
-    font-size: 52px;
+.overlay h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
     margin-bottom: 20px;
 }
 
-.slider-overlay p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-/* BUTTON */
-
 .btn {
     background: #d66d00;
-    color: #fff;
     padding: 12px 30px;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #ffa648;
-}
 
-/* SECTIONS */
-
+/* ===== SECTIONS ===== */
 .section {
-    padding: 80px 0;
-}
-
-.section h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
+    padding: 80px 20px;
 }
 
 .grey {
@@ -144,31 +116,34 @@ nav a:hover {
 
 .dark {
     background: #111;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
-/* GRID */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
 
+.narrow {
+    max-width: 700px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* ===== GRIDS ===== */
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 30px;
-}
-
-.card {
-    background: #fff;
-    padding: 30px;
-    border: 1px solid #eee;
-}
-
-.card h3 {
-    margin-bottom: 15px;
 }
 
 .grid-4 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
     gap: 25px;
 }
 
@@ -178,118 +153,99 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* FOOTER */
-
-.footer {
-    background: #000;
-    color: #fff;
-    padding-top: 60px;
+.card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #eee;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding-bottom: 40px;
-}
+/* ================= PROJECTS HERO ================= */
 
-.footer-logo {
-    height: 60px;
-    margin-bottom: 20px;
-}
+.projects-hero {
+    height: 60vh;
 
-.footer h3 {
-    margin-bottom: 15px;
-}
+    /* Default Background Image */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("images/projects-bg.jpg");
 
-.footer-links ul {
-    list-style: none;
-}
+    background-size: cover;
+    background-position: center;
 
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #ccc;
-}
-
-.footer-links a:hover {
-    color: #d66d00;
-}
-
-.footer-contact p {
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-.footer-bottom {
-    border-top: 1px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    color: white;
+}
+
+.projects-overlay h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.projects-overlay p {
+    font-size: 18px;
+}
+
+
+
+/* ================= PROJECT CARDS ================= */
+
+.projects-section {
+    padding: 80px 20px;
+    background: #f7f7f7;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: white;
     padding: 20px;
-    font-size: 14px;
-    background: #111;
-}
-
-/* INSTAGRAM */
-
-.instagram-link {
-    margin-top: 12px;
-}
-
-.instagram-link img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+    border: 1px solid #eee;
     transition: 0.3s;
 }
 
-.instagram-link img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
-/* MOBILE */
+.project-card h3 {
+    margin-bottom: 10px;
+}
 
-@media (max-width: 768px) {
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .nav {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 15px;
-    }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+/* ===== CLIENT LOGOS ===== */
+.clients {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
 
-    .slider {
-        height: 70vh;
-    }
+.clients img {
+    width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
 
-    .slider-overlay h1 {
-        font-size: 30px;
-    }
 
-    .slider-overlay p {
-        font-size: 14px;
-        padding: 0 20px;
-    }
-
-    .section {
-        padding: 60px 20px;
-    }
-
-    .grid-3,
-    .grid-4 {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }

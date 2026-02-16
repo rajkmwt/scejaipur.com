@@ -196,6 +196,42 @@
 <!-- ================= SERVICES POLYGON ================= -->
 <section id="services" class="services-polygon">
 
+    <!-- 🔥 ADD THIS SVG BLOCK HERE (background layer) -->
+    <div class="polygon-bg">
+        <svg viewBox="0 0 1440 600" preserveAspectRatio="none">
+
+            <defs>
+                <!-- Orange Gradient -->
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffb300"/>
+                    <stop offset="100%" stop-color="#f57c00"/>
+                </linearGradient>
+            </defs>
+
+            <!-- Main Polygon (exact sharp edges style) -->
+            <polygon 
+                points="60,0 1380,0 1440,100 1440,500 1380,600 60,600 0,500 0,100"
+                fill="url(#grad1)"
+            />
+
+            <!-- Top Black Edge -->
+            <polygon 
+                points="60,0 1380,0 1320,40 120,40"
+                fill="#111"
+            />
+
+            <!-- Bottom Black Edge -->
+            <polygon 
+                points="60,600 1380,600 1320,560 120,560"
+                fill="#111"
+            />
+
+        </svg>
+    </div>
+    <!-- 🔥 END SVG BLOCK -->
+
+
+    <!-- YOUR ORIGINAL CONTENT (UNCHANGED) -->
     <div class="services-inner">
 
         <h2 class="services-title">SERVICES PROVIDE</h2>
@@ -204,9 +240,8 @@
 
             <!-- LEFT SERVICES -->
             <div class="services-left">
-
                 <div class="service-item">
-                    <img src="uploads/images/Icons/contract.svg" alt="General Contracting">
+                    <img src="uploads/images/Icons/contract.svg">
                     <div>
                         <h3>GENERAL CONTRACTING</h3>
                         <p>Comprehensive construction execution including planning, supervision and structural development.</p>
@@ -214,7 +249,7 @@
                 </div>
 
                 <div class="service-item">
-                    <img src="uploads/images/Icons/env.svg" alt="Environmental Works">
+                    <img src="uploads/images/Icons/env.svg">
                     <div>
                         <h3>ENVIRONMENTAL WORKS</h3>
                         <p>Site development, drainage systems and sustainable environmental construction solutions.</p>
@@ -222,27 +257,23 @@
                 </div>
 
                 <div class="service-item">
-                    <img src="uploads/images/Icons/aqua.svg" alt="Marine Works">
+                    <img src="uploads/images/Icons/aqua.svg">
                     <div>
                         <h3>MARINE WORKS</h3>
                         <p>Water-related infrastructure including foundations, waterproofing and structural protection.</p>
                     </div>
                 </div>
-
             </div>
-
 
             <!-- CENTER LOGO -->
             <div class="services-center">
-                <img src="uploads/images/Icons/logo4.svg" alt="Center Logo">
+                <img src="uploads/images/Icons/logo4.svg">
             </div>
-
 
             <!-- RIGHT SERVICES -->
             <div class="services-right">
-
                 <div class="service-item">
-                    <img src="uploads/images/Icons/land.svg" alt="Landscape Works">
+                    <img src="uploads/images/Icons/land.svg">
                     <div>
                         <h3>LANDSCAPE WORKS</h3>
                         <p>External development including paving, green zones and site beautification works.</p>
@@ -250,7 +281,7 @@
                 </div>
 
                 <div class="service-item">
-                    <img src="uploads/images/Icons/steel.svg" alt="Steel Works">
+                    <img src="uploads/images/Icons/steel.svg">
                     <div>
                         <h3>STEEL WORKS</h3>
                         <p>Fabrication and structural steel execution for industrial and commercial projects.</p>
@@ -258,19 +289,19 @@
                 </div>
 
                 <div class="service-item">
-                    <img src="uploads/images/Icons/finish.svg" alt="Finishing Works">
+                    <img src="uploads/images/Icons/finish.svg">
                     <div>
                         <h3>FINISHING WORKS</h3>
                         <p>High-quality interior and exterior finishing including flooring and surface detailing.</p>
                     </div>
                 </div>
-
             </div>
 
         </div>
     </div>
 
 </section>
+
 
 
 

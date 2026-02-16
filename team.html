@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Overview | Shree Contractors & Engineers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="header">
+    <div class="nav container">
+        <a href="/">
+            <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo" id="logo">
+        </a>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="our-team.html">COMPANY OVERVIEW</a>
+            <a href="index.html#services">SERVICES</a>
+            <a href="index.html#projects">PROJECTS</a>
+            <a href="index.html#clients">CLIENTS</a>
+            <a href="index.html#footer">CONTACT</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+<section class="inner-hero">
+    <div class="inner-overlay">
+        <h1>Company Overview</h1>
+        <p>Engineering Excellence. Built on Trust.</p>
+    </div>
+</section>
+
+
+<!-- ================= ABOUT COMPANY ================= -->
+<section class="section">
+    <div class="container">
+
+        <h2>Who We Are</h2>
+        <p>
+            Shree Contractors & Engineers is a Jaipur-based construction firm
+            delivering residential, commercial, and industrial projects with
+            structural precision and disciplined execution.
+        </p>
+
+        <p>
+            Under the leadership of <strong>Mr. Ramswaroop Kumawat</strong>,
+            we focus on quality materials, engineering supervision, and
+            on-time completion. Our projects stand on strong foundations —
+            both structurally and ethically.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- ================= MISSION & VALUES ================= -->
+<section class="section grey">
+    <div class="container">
+
+        <h2>Our Commitment</h2>
+
+        <div class="grid-3">
+            <div class="card">
+                <h3>Quality First</h3>
+                <p>Every project reflects structural integrity and certified materials.</p>
+            </div>
+
+            <div class="card">
+                <h3>On-Time Execution</h3>
+                <p>Strict timeline discipline from excavation to final finishing.</p>
+            </div>
+
+            <div class="card">
+                <h3>Client Trust</h3>
+                <p>Long-term relationships built on transparency and reliability.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= TEAM SECTION ================= -->
+<section class="section">
+    <div class="container">
+
+        <h2>Leadership & Core Team</h2>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <h3>Mr. Ramswaroop Kumawat</h3>
+                <p>Director</p>
+            </div>
+
+            <div class="team-card">
+                <h3>Project Management Team</h3>
+                <p>Execution & Site Supervision</p>
+            </div>
+
+            <div class="team-card">
+                <h3>Engineering Division</h3>
+                <p>Structural Planning & Quality Control</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="main-footer" id="footer">
+
+    <div class="footer-container container">
+
+        <div class="footer-col">
+            <img src="uploads/images/logo2.png" class="footer-logo">
+
+            <h3>Contact Us</h3>
+            <p>+91 8290941511</p>
+            <p>rskhoraniya@gmail.com</p>
+            <p>Jaipur, Rajasthan</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-team.html">Company Overview</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#clients">Clients</a></li>
+                <li><a href="index.html#footer">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Connect</h3>
+            <a href="https://www.instagram.com/scejaipur" target="_blank">
+                <img src="uploads/images/ig.png" class="social-icon">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Shree Contractors & Engineers. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<script>
+window.addEventListener("scroll", function() {
+    const header = document.getElementById("header");
+    const logo = document.getElementById("logo");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+        logo.src = "uploads/images/logo.png";
+    } else {
+        header.classList.remove("scrolled");
+        logo.src = "uploads/images/logo3.png";
+    }
+});
+</script>
+
+</body>
+</html>

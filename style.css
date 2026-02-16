@@ -522,3 +522,15 @@ header.scrolled .menu-toggle span {
     text-align: center;
 }
 
+
+.seo-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.seo-heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+

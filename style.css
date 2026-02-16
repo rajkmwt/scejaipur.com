@@ -241,6 +241,11 @@ header.scrolled .menu-toggle span {
     box-shadow: 0 15px 30px rgba(0,0,0,0.10);
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 
 /* ================= CLIENTS ================= */
 

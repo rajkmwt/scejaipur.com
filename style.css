@@ -358,9 +358,9 @@ header.scrolled .menu-toggle span {
 }
 
 
-/* ================= SERVICES POLYGON (SVG VERSION) ================= */
+/* ================= SERVICES HEXAGON (SVG VERSION) ================= */
 
-.services-polygon {
+.services-hexagon {
     position: relative;
     padding: 120px 20px;
     color: #fff;
@@ -368,13 +368,13 @@ header.scrolled .menu-toggle span {
 }
 
 /* SVG Background Layer */
-.polygon-bg {
+.hexagon-bg {
     position: absolute;
     inset: 0;
     z-index: -1;
 }
 
-.polygon-bg svg {
+.hexagon-bg svg {
     width: 100%;
     height: 100%;
     display: block;

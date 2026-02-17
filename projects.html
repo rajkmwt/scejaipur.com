@@ -2,13 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Our Projects | Shree Contractors & Engineers</title>
+    <title>Projects | SCE</title>
+
+    <meta name="description" content="Shree Contractors & Engineers is a Jaipur-based construction company delivering residential, commercial and industrial projects across Rajasthan.">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ConstructionCompany",
+  "name": "Shree Contractors & Engineers",
+  "areaServed": "Jaipur, Rajasthan",
+  "telephone": "+91 8290941511"
+}
+</script>
+
 </head>
 
 <body>
@@ -18,34 +33,36 @@
 
     <div class="nav container">
 
+        <!-- LOGO -->
         <a href="index.html">
             <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo" id="logo">
         </a>
 
+        <!-- HAMBURGER BUTTON (Mobile Only) -->
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
+        <!-- NAVIGATION -->
         <nav id="nav-menu">
 
             <a href="index.html">HOME</a>
 
+            <!-- COMPANY DROPDOWN -->
             <div class="nav-item">
-                <a href="#" class="company-link">
-                    COMPANY <span class="arrow">&#9662;</span>
-                </a>
+                <a href="company.html" class="company-link">COMPANY <span class="arrow">&#9662;</span></a>
 
                 <div class="dropdown">
                     <a href="team.html">TEAM</a>
                     <a href="about.html">ABOUT US</a>
                     <a href="tools.html">TOOLS & MACHINERY</a>
-                    <a href="uploads/brochure.pdf" target="_blank">DOWNLOAD BROCHURE</a>
+                    <a href="uploads/brochure/brochure.pdf" target="_blank">DOWNLOAD BROCHURE</a>
                 </div>
             </div>
 
-            <a href="projects.html" class="active">OUR PROJECTS</a>
+            <a href="projects.html">OUR PROJECTS</a>
             <a href="clients.html">CLIENTS</a>
             <a href="blog.html">BLOG</a>
             <a href="contact.html">CONTACT US</a>

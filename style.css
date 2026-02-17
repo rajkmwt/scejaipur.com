@@ -192,13 +192,13 @@ header.scrolled .menu-toggle span {
 
 .overlay h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 52px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 18px;
 }
 
 .overlay p {
-    max-width: 600px;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin-bottom: 22px;
 }
 
 .btn {

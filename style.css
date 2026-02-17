@@ -727,29 +727,34 @@ header.scrolled .menu-toggle span {
 
 
 
-/* ================= PROJECTS PAGE HEADER FIX ================= */
+/* ================================
+   Projects Page – Header
+================================ */
 
 .projects-page #header {
     position: sticky;
     top: 0;
     width: 100%;
-    background: #ffffff;
+    background-color: #fff;
     z-index: 9999;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Force white even if JS adds scrolled */
-.projects-page #header.scrolled {
-    background: #ffffff;
-}
-
-.nav {
+/* Navigation layout */
+.projects-page .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 40px;
 }
 
-.logo {
+.projects-page .logo {
     height: 55px;
+}
+
+/* Header colors */
+.projects-page #header nav a,
+.projects-page #header .menu-toggle span {
+    color: #000;
+    background-color: #000;
 }

@@ -649,42 +649,31 @@ header.scrolled .menu-toggle span {
 /* ===== HERO MOBILE FIX ===== */
 @media (max-width: 900px) {
 
-    .hero-title {
-        font-size: 22px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .hero-sub {
-        font-size: 12px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-}
-
-@media (max-width: 900px) {
-
+    /* Push hero content down properly */
     .overlay {
         justify-content: flex-start;
-        padding-top: 140px;   /* pushes hero content down */
+        padding-top: 120px;
     }
 
+    /* HERO TITLE */
     .hero-title {
-        margin-top: 20px;
-        font-size: 22px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 20px;        /* reduced */
+        font-weight: 700;
+        padding: 0 25px;        /* prevents touching edges */
+        white-space: normal;    /* allow clean wrapping */
     }
 
+    /* HERO SUBTITLE */
     .hero-sub {
-        font-size: 12px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 11px;        /* smaller */
+        font-weight: 700;       /* bold */
+        padding: 0 25px;
+        line-height: 1.4;
+    }
+
+    /* Remove scroll indicator */
+    .scroll-indicator {
+        display: none;
     }
 
 }

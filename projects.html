@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="projects-page">
+ 
 
 <!-- ================= HEADER ================= -->
 <header id="header">
     <div class="nav container">
 
         <a href="index.html">
-            <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo" id="logo">
+            <img src="uploads/images/logo.png" alt="SCE Logo" class="logo" id="logo">
+
         </a>
 
         <div class="menu-toggle" id="menu-toggle">
@@ -363,21 +365,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* HEADER SCROLL EFFECT */
-    window.addEventListener("scroll", function () {
-        const header = document.getElementById("header");
-        const logo = document.getElementById("logo");
-
-        if (!header || !logo) return;
-
-        if (window.scrollY > 50) {
-            header.classList.add("scrolled");
-            logo.src = "uploads/images/logo.png";
-        } else {
-            header.classList.remove("scrolled");
-            logo.src = "uploads/images/logo3.png";
-        }
-    });
+ 
 
     /* PROJECT IMAGE SLIDERS */
     document.querySelectorAll(".project-image").forEach(wrapper => {

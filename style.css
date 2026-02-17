@@ -665,6 +665,29 @@ header.scrolled .menu-toggle span {
 
 }
 
+@media (max-width: 900px) {
+
+    .overlay {
+        justify-content: flex-start;
+        padding-top: 140px;   /* pushes hero content down */
+    }
+
+    .hero-title {
+        margin-top: 20px;
+        font-size: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hero-sub {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+}
 
 
 

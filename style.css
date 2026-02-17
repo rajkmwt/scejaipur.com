@@ -649,34 +649,35 @@ header.scrolled .menu-toggle span {
 /* ===== HERO MOBILE FIX ===== */
 @media (max-width: 900px) {
 
-    /* Push hero content down properly */
     .overlay {
         justify-content: flex-start;
         padding-top: 120px;
     }
 
-    /* HERO TITLE */
     .hero-title {
-        font-size: 20px;        /* reduced */
+        font-size: 18px;        /* smaller so it actually fits */
         font-weight: 700;
-        padding: 0 25px;        /* prevents touching edges */
-        white-space: normal;    /* allow clean wrapping */
+        padding: 0 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    /* HERO SUBTITLE */
     .hero-sub {
-        font-size: 11px;        /* smaller */
-        font-weight: 700;       /* bold */
-        padding: 0 25px;
-        line-height: 1.4;
+        font-size: 10px;        /* must be small to fit */
+        font-weight: 700;
+        padding: 0 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    /* Remove scroll indicator */
     .scroll-indicator {
         display: none;
     }
 
 }
+
 
 
 

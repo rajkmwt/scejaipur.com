@@ -4,55 +4,38 @@
     <meta charset="UTF-8">
     <title>Projects | SCE</title>
 
-    <meta name="description" content="Shree Contractors & Engineers is a Jaipur-based construction company delivering residential, commercial and industrial projects across Rajasthan.">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Shree Contractors & Engineers",
-  "areaServed": "Jaipur, Rajasthan",
-  "telephone": "+91 8290941511"
-}
-</script>
-
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
 <header id="header">
-
     <div class="nav container">
 
-        <!-- LOGO -->
         <a href="index.html">
             <img src="uploads/images/logo3.png" alt="SCE Logo" class="logo" id="logo">
         </a>
 
-        <!-- HAMBURGER BUTTON (Mobile Only) -->
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
         </div>
 
-        <!-- NAVIGATION -->
         <nav id="nav-menu">
 
             <a href="index.html">HOME</a>
 
-            <!-- COMPANY DROPDOWN -->
             <div class="nav-item">
-                <a href="company.html" class="company-link">COMPANY <span class="arrow">&#9662;</span></a>
+                <a href="company.html" class="company-link">
+                    COMPANY <span class="arrow">&#9662;</span>
+                </a>
 
                 <div class="dropdown">
                     <a href="team.html">TEAM</a>
@@ -62,15 +45,13 @@
                 </div>
             </div>
 
-            <a href="projects.html">OUR PROJECTS</a>
+            <a href="projects.html" class="active">OUR PROJECTS</a>
             <a href="clients.html">CLIENTS</a>
             <a href="blog.html">BLOG</a>
             <a href="contact.html">CONTACT US</a>
 
         </nav>
-
     </div>
-
 </header>
     
     
@@ -320,3 +301,132 @@
     </div>
 
 </section>
+
+    <!-- ================= FOOTER ================= -->
+<footer class="main-footer">
+    <div class="footer-container container">
+
+        <div class="footer-col">
+            <img src="uploads/images/logo2.png" class="footer-logo">
+            <h3>Contact Us</h3>
+            <p>+91 8290941511</p>
+            <p>rskhoraniya@gmail.com</p>
+            <p>Jaipur, Rajasthan</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">COMPANY</a></li>
+                <li><a href="projects.html">OUR PROJECTS</a></li>
+                <li><a href="clients.html">CLIENTS</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>CONNECT WITH US</h3>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Shree Contractors & Engineers. All Rights Reserved.
+    </div>
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* MOBILE MENU */
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+    }
+
+    /* COMPANY DROPDOWN (Mobile) */
+    const companyItem = document.querySelector(".nav-item");
+    if (companyItem) {
+        companyItem.addEventListener("click", function (e) {
+            if (window.innerWidth < 900) {
+                e.preventDefault();
+                this.classList.toggle("active");
+            }
+        });
+    }
+
+    /* HEADER SCROLL EFFECT */
+    window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        const logo = document.getElementById("logo");
+
+        if (!header || !logo) return;
+
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+            logo.src = "uploads/images/logo.png";
+        } else {
+            header.classList.remove("scrolled");
+            logo.src = "uploads/images/logo3.png";
+        }
+    });
+
+    /* PROJECT IMAGE SLIDERS */
+    document.querySelectorAll(".project-image").forEach(wrapper => {
+
+        const img = wrapper.querySelector("img");
+        const leftBtn = wrapper.querySelector(".left");
+        const rightBtn = wrapper.querySelector(".right");
+        const dotsContainer = wrapper.querySelector(".dots");
+
+        if (!img || !leftBtn || !rightBtn) return;
+
+        const images = wrapper.dataset.images.split(",");
+        let index = 0;
+
+        if (dotsContainer) {
+            dotsContainer.innerHTML = "";
+            images.forEach((_, i) => {
+                const dot = document.createElement("span");
+                if (i === 0) dot.classList.add("active");
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        const dots = dotsContainer ? dotsContainer.querySelectorAll("span") : [];
+
+        function updateImage() {
+            img.src = images[index].trim();
+            dots.forEach(dot => dot.classList.remove("active"));
+            if (dots[index]) dots[index].classList.add("active");
+        }
+
+        rightBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            index = (index + 1) % images.length;
+            updateImage();
+        });
+
+        leftBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            index = (index - 1 + images.length) % images.length;
+            updateImage();
+        });
+
+    });
+
+});
+</script>
+
+</body>
+</html>

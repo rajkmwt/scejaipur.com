@@ -649,23 +649,22 @@ header.scrolled .menu-toggle span {
 /* ===== HERO MOBILE FIX ===== */
 @media (max-width: 900px) {
 
-    /* Fix only hero title & subtitle for mobile */
-
     .hero-title {
-        font-size: 26px;       /* smaller for mobile */
-        line-height: 1.2;
-        padding: 0 15px;
-        word-break: break-word;
+        font-size: 22px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .hero-sub {
-        font-size: 14px;
-        line-height: 1.5;
-        padding: 0 20px;
-        max-width: 100%;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
 }
+
 
 
 

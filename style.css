@@ -415,12 +415,16 @@ header.scrolled .menu-toggle span {
 
 .dots {
     position: absolute;
-    bottom: 12px;
+    bottom: 20px;   /* moved up */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 6px;
+    padding: 4px 10px;
+    background: rgba(0,0,0,0.15);  /* subtle soft strip */
+    border-radius: 20px;
 }
+
 
 .dots span {
     width: 7px;

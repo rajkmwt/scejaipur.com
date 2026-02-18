@@ -85,50 +85,64 @@ nav a:hover {
     transition: 0.3s ease;
 }
 
-/* Dropdown panel */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 220px;
-    background: rgba(255, 255, 255, 0.7);  /* 70% transparent */
-    backdrop-filter: blur(6px);
-    padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 6px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+
+/* ================= DESKTOP GLASS DROPDOWN ================= */
+@media (min-width: 901px) {
+
+    .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 240px;
+
+        background: rgba(255, 255, 255, 0.15);   /* glass transparency */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+
+        padding: 18px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: 0.3s ease;
+    }
+
+    .dropdown a {
+        color: #ffffff;   /* white glass text */
+        padding: 8px 22px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .dropdown a:hover {
+        background: rgba(255,255,255,0.15);
+    }
+
+    /* Show dropdown on hover */
+    .nav-item:hover .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Rotate arrow when open */
+    .nav-item:hover .arrow {
+        transform: rotate(180deg);
+    }
+
 }
 
-/* Dropdown links */
-.dropdown a {
-    color: #111;
-    padding: 8px 20px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-}
 
-.dropdown a:hover {
-    background: rgba(0,0,0,0.05);
-}
-
-/* Show dropdown on hover */
-.nav-item:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* Rotate arrow when open */
-.nav-item:hover .arrow {
-    transform: rotate(180deg);
-}
 
 
 

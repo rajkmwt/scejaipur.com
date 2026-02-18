@@ -626,27 +626,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    /* ================= HERO COUNTERS ================= */
-    const counters = document.querySelectorAll('.counter');
+    /* ================= HERO COUNTERS (SLOWER & SMOOTHER) ================= */
+const counters = document.querySelectorAll('.counter');
 
-    counters.forEach(counter => {
+counters.forEach(counter => {
 
-        const target = +counter.getAttribute('data-target');
-        let count = 0;
-        const increment = target / 100;
+    const target = +counter.getAttribute('data-target');
+    const duration = 4000; // total animation time in ms (5 seconds)
+    const stepTime = 30;   // time between updates
+    const steps = duration / stepTime;
+    const increment = target / steps;
 
-        function updateCount() {
-            if (count < target) {
-                count += increment;
-                counter.innerText = Math.ceil(count);
-                setTimeout(updateCount, 20);
-            } else {
-                counter.innerText = target + "+";
-            }
+    let count = 0;
+
+    function updateCount() {
+        count += increment;
+
+        if (count < target) {
+            counter.innerText = Math.floor(count);
+            setTimeout(updateCount, stepTime);
+        } else {
+            counter.innerText = target + "+";
         }
+    }
 
-        updateCount();
-    });
+    updateCount();
+});
+
 
 
     /* ================= PROJECT IMAGE SLIDERS ================= */

@@ -42,7 +42,6 @@
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
-            <span></span>
         </div>
 
         <!-- NAVIGATION -->
@@ -589,12 +588,14 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ================= MOBILE MENU TOGGLE ================= */
     const toggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
-
+    
     if (toggle) {
         toggle.addEventListener("click", () => {
             navMenu.classList.toggle("active");
+            toggle.classList.toggle("active");
         });
     }
+
 
 
     /* ================= COMPANY DROPDOWN CLICK (Mobile) ================= */

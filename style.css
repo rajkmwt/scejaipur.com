@@ -164,15 +164,20 @@ header.scrolled .menu-toggle span {
 }
 
 /* ===== ACTIVE STATE ( = → X ) ===== */
+.menu-toggle.active span {
+    top: 50%;
+    bottom: auto;
+    transform-origin: center;
+}
+
 .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 8px;
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .menu-toggle.active span:nth-child(2) {
-    transform: rotate(-45deg);
-    bottom: 8px;
+    transform: translateY(-50%) rotate(-45deg);
 }
+
 
 
 /* ================= SLIDER ================= */

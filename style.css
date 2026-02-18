@@ -913,8 +913,11 @@ header.scrolled .menu-toggle span {
 }
 
 /* Header colors */
-.projects-page #header nav a,
-.projects-page #header .menu-toggle span {
+.projects-page #header nav a {
     color: #000;
+}
+
+.projects-page #header .menu-toggle span {
     background-color: #000;
 }
+

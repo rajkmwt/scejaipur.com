@@ -345,8 +345,6 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-
-    
     /* ================= MOBILE MENU TOGGLE ================= */
     const toggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
@@ -356,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navMenu.classList.toggle("active");
             toggle.classList.toggle("active");
         });
-    }}
+    }
 
     /* COMPANY DROPDOWN (Mobile) */
     const companyItem = document.querySelector(".nav-item");
@@ -369,9 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-
-        /* ================= SCROLL REVEAL (FOR .reveal & .fade-in) ================= */
+    /* ================= SCROLL REVEAL ================= */
     const animatedElements = document.querySelectorAll(".reveal, .fade-in");
 
     function revealOnScroll() {
@@ -388,10 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // run once on load
-
-
-    
+    revealOnScroll();
 
     /* PROJECT IMAGE SLIDERS */
     document.querySelectorAll(".project-image").forEach(wrapper => {

@@ -975,8 +975,8 @@ header.scrolled .menu-toggle span {
 }
 
 .loader-logo {
-    width: 180px;
-    animation: fadeLoop 3s ease-in-out infinite;
+    width: 140px;
+    animation: fadeLoop 2.5s ease-in-out infinite;
 }
 
 @keyframes fadeLoop {

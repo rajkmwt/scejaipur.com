@@ -239,6 +239,35 @@ header.scrolled .menu-toggle span {
     }
 }
 
+
+/* ===== Fade In ===== */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Dual Buttons */
 .hero-buttons {
     display: flex;

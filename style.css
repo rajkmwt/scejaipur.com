@@ -800,35 +800,15 @@ header.scrolled .menu-toggle span {
 
     nav {
         position: absolute;
-        top: 70px;          /* keep old position */
-        right: -260px;      /* hidden off screen */
-        width: 250px;       /* old width */
-        padding: 20px;
-
-        display: flex;
+        top: 70px;
+        right: 0;
+        background: white;
         flex-direction: column;
-        gap: 15px;
-
-        background: rgba(255, 255, 255, 0.15);   /* transparent */
-        backdrop-filter: blur(12px);             /* glass */
-        -webkit-backdrop-filter: blur(12px);
-
-        border-radius: 10px 0 0 10px;
-        box-shadow: -10px 10px 30px rgba(0,0,0,0.15);
-
-        transition: right 0.35s ease;
+        width: 250px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
-
-    nav.active {
-        right: 0;   /* slide in */
-    }
-
-    nav a {
-        color: #111;
-        font-size: 15px;
-    }
-}
-
 
 
     nav a {

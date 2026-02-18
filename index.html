@@ -598,16 +598,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ================= COMPANY DROPDOWN CLICK (Mobile) ================= */
-    const companyItem = document.querySelector(".nav-item");
-
-    if (companyItem) {
-        companyItem.addEventListener("click", function (e) {
+    const companyLink = document.querySelector(".company-link");
+    if (companyLink) {
+        companyLink.addEventListener("click", function (e) {
             if (window.innerWidth < 900) {
-                e.preventDefault();
-                this.classList.toggle("active");
-            }
-        });
-    }
+                e.preventDefault(); // only block COMPANY main link
+                this.parentElement.classList.toggle("active");
+        }
+    });
+}
+
 
 
     /* ================= HEADER CHANGE ON SCROLL ================= */

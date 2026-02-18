@@ -796,39 +796,30 @@ header.scrolled .menu-toggle span {
 
 /* ================= RESPONSIVE ================= */
 
+
+@media (max-width: 900px) {
+
 nav {
-    position: fixed;
+    position: absolute;
     top: 70px;
     right: 0;
-    height: calc(100vh - 70px);
-    width: 260px;
 
-    /* Glass effect */
+    width: 250px;
+    padding: 20px;
+
+    /* SAME SIZE – just glass */
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     flex-direction: column;
-    padding: 25px 20px;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 
-    /* Slide animation setup */
+    /* Slide animation */
     transform: translateX(100%);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
-/* Links inside mobile panel */
-nav a {
-    color: #111;
-    margin-bottom: 18px;
-}
-
-/* ACTIVE STATE */
-nav.active {
-    transform: translateX(0);
-    opacity: 1;
-}
 
 
 
@@ -841,9 +832,11 @@ nav.active {
         margin-bottom: 15px;
     }
 
-    nav.active {
-        display: flex;
-    }
+nav.active {
+    display: flex;
+    transform: translateX(0);
+}
+
 
     .menu-toggle {
         display: flex;

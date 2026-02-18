@@ -799,23 +799,24 @@ header.scrolled .menu-toggle span {
 @media (max-width: 900px) {
 
     nav {
-        position: fixed;
-        top: 0;
-        right: -100%;              /* hide off screen */
-        height: 100vh;
-        width: 260px;
-        padding: 100px 25px 25px 25px;
+        position: absolute;
+        top: 70px;          /* keep old position */
+        right: -260px;      /* hidden off screen */
+        width: 250px;       /* old width */
+        padding: 20px;
 
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
 
-        background: rgba(255, 255, 255, 0.15);  /* transparent */
-        backdrop-filter: blur(15px);            /* glass effect */
-        -webkit-backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.15);   /* transparent */
+        backdrop-filter: blur(12px);             /* glass */
+        -webkit-backdrop-filter: blur(12px);
 
-        box-shadow: -10px 0 30px rgba(0,0,0,0.2);
-        transition: 0.4s ease;
+        border-radius: 10px 0 0 10px;
+        box-shadow: -10px 10px 30px rgba(0,0,0,0.15);
+
+        transition: right 0.35s ease;
     }
 
     nav.active {
@@ -824,7 +825,7 @@ header.scrolled .menu-toggle span {
 
     nav a {
         color: #111;
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 

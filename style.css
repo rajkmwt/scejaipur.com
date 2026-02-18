@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body.loading {
+    overflow: hidden;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -953,6 +958,41 @@ header.scrolled .menu-toggle span {
 .projects-page #header nav a {
     color: #000;
 }
+
+
+
+
+/* ================= WHITE LOGO LOADER ================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loader-logo {
+    width: 180px;
+    animation: fadeLoop 3s ease-in-out infinite;
+}
+
+@keyframes fadeLoop {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
 
 .projects-page #header .menu-toggle span {
     background-color: #000;

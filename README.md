@@ -1,1 +1,0 @@
-# scejaipur.com

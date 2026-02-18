@@ -243,7 +243,7 @@ header.scrolled .menu-toggle span {
 /* ===== Fade In ===== */
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.5s ease;
 }
 
 .fade-in.active {
@@ -260,7 +260,7 @@ header.scrolled .menu-toggle span {
 .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: 0.8s ease;
+    transition: 1.2s ease;
 }
 
 .reveal.active {

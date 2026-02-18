@@ -216,12 +216,12 @@ header.scrolled .menu-toggle span {
 .hero-buttons,
 .hero-stats {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
     animation: fadeUp 1s ease forwards;
 }
 
 .hero-sub {
-    animation-delay: 0.4s;
+    animation-delay: 0.5s;
 }
 
 .hero-buttons {
@@ -229,7 +229,7 @@ header.scrolled .menu-toggle span {
 }
 
 .hero-stats {
-    animation-delay: 1.2s;
+    animation-delay: 1.5s;
 }
 
 @keyframes fadeUp {

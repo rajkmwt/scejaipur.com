@@ -130,6 +130,8 @@ nav a:hover {
 }
 
 
+
+
 /* ================= MOBILE MENU ================= */
 
 .menu-toggle {
@@ -163,6 +165,7 @@ header.scrolled .menu-toggle span {
     bottom: 0;
 }
 
+
 /* ===== ACTIVE STATE ( = → X ) ===== */
 .menu-toggle.active span {
     top: 50%;
@@ -177,6 +180,38 @@ header.scrolled .menu-toggle span {
 .menu-toggle.active span:nth-child(2) {
     transform: translateY(-50%) rotate(-45deg);
 }
+
+
+
+/* ================= MOBILE DROPDOWN FIX ================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Disable hover behavior on mobile */
+    .nav-item:hover .dropdown {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+
+    /* Show dropdown when clicked */
+    .nav-item.active .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Rotate arrow when open */
+    .nav-item.active .arrow {
+        transform: rotate(180deg);
+    }
+
+}
+
 
 
 

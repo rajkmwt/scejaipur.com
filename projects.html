@@ -17,27 +17,27 @@
 
 <!-- ================= HEADER ================= -->
 <header id="header">
+    
     <div class="nav container">
-
+        <!-- LOGO -->
         <a href="index.html">
             <img src="uploads/images/logo.png" alt="SCE Logo" class="logo" id="logo">
-
         </a>
-
+        
+        <!-- HAMBURGER BUTTON (Mobile Only) -->
         <div class="menu-toggle" id="menu-toggle">
             <span></span>
             <span></span>
-            <span></span>
         </div>
-
+        
+        <!-- NAVIGATION -->
         <nav id="nav-menu">
 
             <a href="index.html">HOME</a>
-
+            
+            <!-- COMPANY DROPDOWN -->
             <div class="nav-item">
-                <a href="company.html" class="company-link">
-                    COMPANY <span class="arrow">&#9662;</span>
-                </a>
+                <a href="company.html" class="company-link">COMPANY <span class="arrow">&#9662;</span></a>
 
                 <div class="dropdown">
                     <a href="team.html">TEAM</a>
@@ -59,15 +59,15 @@
     
     
     
-    <!-- ================= PROJECTS ================= -->
-<link rel="stylesheet" href="style.css">
-
+<!-- ================= PROJECTS ================= -->
 <section id="projects" class="projects-section">
 
     <div class="container">
-        <h2 class="center section-title">OUR PROJECTS</h2>
+        <h2 class="center section-title fade-in">OUR PROJECTS</h2>
 
-        <div class="projects-grid">
+
+        <div class="projects-grid fade-in">
+
 
             <!-- BAGAI -->
             <a href="https://bagaibuildcon.com/" class="project-link" target="_blank" rel="noopener noreferrer">
@@ -339,20 +339,24 @@
     </div>
 </footer>
 
+    
 
 <!-- ================= SCRIPTS ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* MOBILE MENU */
+
+    
+    /* ================= MOBILE MENU TOGGLE ================= */
     const toggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
-
+    
     if (toggle) {
         toggle.addEventListener("click", () => {
             navMenu.classList.toggle("active");
+            toggle.classList.toggle("active");
         });
-    }
+    }}
 
     /* COMPANY DROPDOWN (Mobile) */
     const companyItem = document.querySelector(".nav-item");
@@ -365,7 +369,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
- 
+
+
+        /* ================= SCROLL REVEAL (FOR .reveal & .fade-in) ================= */
+    const animatedElements = document.querySelectorAll(".reveal, .fade-in");
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        const revealPoint = 100;
+
+        animatedElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - revealPoint) {
+                element.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // run once on load
+
+
+    
 
     /* PROJECT IMAGE SLIDERS */
     document.querySelectorAll(".project-image").forEach(wrapper => {

@@ -1139,12 +1139,21 @@ header.scrolled .menu-toggle span {
 
 .clients-hero-bg {
     height: 70vh;
-    background: url("uploads/images/clients-bg.webp") center/cover no-repeat;
+    background: url("uploads/images/clients-bg-desktop.webp") center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/* Mobile Background */
+@media (max-width: 900px) {
+    .clients-hero-bg {
+        background: url("uploads/images/clients-bg-mobile.webp") center/cover no-repeat;
+        height: 60vh;
+    }
+}
+
 
 .clients-hero-overlay {
     position: absolute;

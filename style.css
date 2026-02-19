@@ -966,6 +966,48 @@ header.scrolled .menu-toggle span {
 
 
 
+/* ================= INENR PAGE ABOUT HERO FIX ================= */
+
+.about-hero {
+    height: 85vh;  /* Taller hero */
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("uploads/images/about/construction-hero.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-overlay {
+    text-align: center;
+    color: #ffffff;  /* FORCE white text */
+    padding: 20px;
+}
+
+.about-overlay h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.about-overlay p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* Mobile fix */
+@media (max-width: 900px) {
+    .about-hero {
+        height: 70vh;
+    }
+
+    .about-overlay h1 {
+        font-size: 28px;
+    }
+}
+
+
 
 /* ================= WHITE LOGO LOADER ================= */
 

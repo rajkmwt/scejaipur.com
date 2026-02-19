@@ -1037,6 +1037,71 @@ header.scrolled .menu-toggle span {
 
 
 
+/* ================= CONTACT INNER PAGE ================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.contact-card h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+
+/* ===== FORM ===== */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d66d00;
+}
+
+.full-btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
 
 
 

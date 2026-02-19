@@ -72,7 +72,7 @@
         <!-- ================= CATEGORY GRID ================= -->
 <div class="category-grid fade-in">
 
-    <div class="category-card active" data-category=""residential"">
+    <div class="category-card active" data-category="residential">
         <img src="uploads/images/category/residential.svg" alt="Residential Projects">
         <h3>Residential</h3>
     </div>
@@ -528,11 +528,36 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
-/* ================= CATEGORY FILTER ================= */
+
+
+    /* ================= CATEGORY FILTER ================= */
 
 const categoryCards = document.querySelectorAll(".category-card");
 const projectGroups = document.querySelectorAll(".project-group");
 
+// FUNCTION to show only selected category
+function showCategory(category) {
+
+    projectGroups.forEach(group => {
+        group.style.display = "none";
+    });
+
+    const selectedGroup = document.querySelector(".project-group." + category);
+
+    if (selectedGroup) {
+        selectedGroup.style.display = "block";
+    }
+}
+
+// ===== Default Load =====
+// Get the initially active button
+const activeCard = document.querySelector(".category-card.active");
+
+if (activeCard) {
+    showCategory(activeCard.dataset.category);
+}
+
+// ===== Click Behavior =====
 categoryCards.forEach(card => {
 
     card.addEventListener("click", function () {
@@ -540,25 +565,13 @@ categoryCards.forEach(card => {
         categoryCards.forEach(c => c.classList.remove("active"));
         this.classList.add("active");
 
-        const category = this.dataset.category;
-
-        projectGroups.forEach(group => {
-
-            if (category === "all") {
-                group.style.display = "block";
-            } else {
-                if (group.classList.contains(category)) {
-                    group.style.display = "block";
-                } else {
-                    group.style.display = "none";
-                }
-            }
-
-        });
+        showCategory(this.dataset.category);
 
     });
 
 });
+
+
 
 
     

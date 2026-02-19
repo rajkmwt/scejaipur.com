@@ -1154,6 +1154,15 @@ header.scrolled .menu-toggle span {
     margin-bottom: 10px;
 }
 
+.major-client:nth-child(even) {
+    direction: rtl;
+}
+
+.major-client:nth-child(even) .major-client-content {
+    direction: ltr;
+}
+
+
 /* ===== TESTIMONIALS ===== */
 .testimonial-grid {
     display: grid;

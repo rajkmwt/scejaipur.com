@@ -1040,6 +1040,47 @@ header.scrolled .menu-toggle span {
 
 
 
+/* ================= UNDER CONSTRUCTION COMMON TEMP PAGE ================= */
+
+.under-construction {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("uploads/images/about/jaipur-skyline-construction.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.construction-overlay {
+    color: #ffffff;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.construction-overlay h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.construction-overlay p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+    .construction-overlay h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+
 
 /* ================= WHITE LOGO LOADER ================= */
 

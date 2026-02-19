@@ -933,6 +933,7 @@ header.scrolled .menu-toggle span {
 
 
 
+
 /* ================================
    Inner Pages – Header
 ================================ */
@@ -963,6 +964,10 @@ header.scrolled .menu-toggle span {
 .inner-page #header nav a {
     color: #000;
 }
+
+
+
+
 
 
 
@@ -1006,6 +1011,23 @@ header.scrolled .menu-toggle span {
         font-size: 28px;
     }
 }
+/* ================= LEADERSHIP IMAGE FIX ================= */
+
+.leadership-img {
+    width: 220px;
+    margin: 30px 0;
+    opacity: 0.95;
+}
+
+@media (max-width: 900px) {
+    .leadership-img {
+        width: 160px;
+    }
+}
+
+
+
+
 
 
 

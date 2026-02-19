@@ -67,6 +67,8 @@
     <div class="container">
         <h2 class="center section-title fade-in">OUR PROJECTS</h2>
 
+
+        
         <!-- ================= CATEGORY GRID ================= -->
 <div class="category-grid fade-in">
 
@@ -526,10 +528,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
-    /* ================= CATEGORY FILTER ================= */
+/* ================= CATEGORY FILTER ================= */
 
 const categoryCards = document.querySelectorAll(".category-card");
-const projects = document.querySelectorAll(".project-link");
+const projectGroups = document.querySelectorAll(".project-group");
 
 categoryCards.forEach(card => {
 
@@ -540,15 +542,15 @@ categoryCards.forEach(card => {
 
         const category = this.dataset.category;
 
-        projects.forEach(project => {
+        projectGroups.forEach(group => {
 
             if (category === "all") {
-                project.style.display = "block";
+                group.style.display = "block";
             } else {
-                if (project.classList.contains(category)) {
-                    project.style.display = "block";
+                if (group.classList.contains(category)) {
+                    group.style.display = "block";
                 } else {
-                    project.style.display = "none";
+                    group.style.display = "none";
                 }
             }
 
@@ -557,6 +559,7 @@ categoryCards.forEach(card => {
     });
 
 });
+
 
     
     /* PROJECT IMAGE SLIDERS */

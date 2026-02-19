@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Contact Shree Contractors & Engineers for residential, commercial and industrial construction projects in Jaipur, Rajasthan.">
+
 </head>
 
 <body class="inner-page">
@@ -47,10 +49,10 @@
                 </div>
             </div>
 
-            <a href="projects.html" class="active">OUR PROJECTS</a>
+            <a href="projects.html">OUR PROJECTS</a>
             <a href="clients.html">CLIENTS</a>
             <a href="blog.html">BLOG</a>
-            <a href="contact.html">CONTACT US</a>
+            <a href="contact.html" class="active">CONTACT US</a>
 
         </nav>
     </div>
@@ -64,7 +66,8 @@
 <!-- ================= INNER HERO ================= -->
 <section class="inner-hero">
     <div class="inner-overlay">
-        <h1>CONTACT US</h1>
+        <h1 class="section-title">CONTACT US</h1>
+
         <p>Let’s build something strong together.</p>
     </div>
 </section>
@@ -113,14 +116,14 @@
 
             <input type="tel" name="phone" placeholder="Phone *" required>
 
-            <textarea name="message" rows="6" placeholder="Your Message *" required></textarea>
+            <input type="text" name="_gotcha" style="display:none">
 
+            <textarea name="message" rows="6" placeholder="Your Message *" required></textarea>
+            <input type="hidden" name="_subject" value="New Contact Form Submission - SCE">
             <button type="submit" class="btn primary-btn full-btn">
                 SUBMIT
             </button>
-
         </form>
-
     </div>
 </section>
 

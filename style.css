@@ -1134,6 +1134,46 @@ header.scrolled .menu-toggle span {
     filter: grayscale(0%);
 }
 
+
+/* ================= CLIENTS HERO BACKGROUND ================= */
+
+.clients-hero-bg {
+    height: 70vh;
+    background: url("uploads/images/clients-bg.webp") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* overlay for readability */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.white {
+    color: #fff;
+}
+
+.clients-tagline {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.clients-intro {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+
 /* ===== MAJOR CLIENTS ===== */
 .major-client {
     display: grid;

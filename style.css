@@ -477,15 +477,6 @@ header.scrolled .menu-toggle span {
     margin: 15px auto 0;
 }
 
-.section-title::after {
-    content: "";
-    width: 80px;
-    height: 3px;
-    background: #d66d00;
-    display: block;
-    margin: 15px auto 0;
-}
-
 
 
 /* ================= CATEGORY GRID ================= */

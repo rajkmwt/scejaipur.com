@@ -1024,6 +1024,15 @@ header.scrolled .menu-toggle span {
         width: 160px;
     }
 }
+/* ===== LEFT ALIGNED SECTION TITLE FIX ===== */
+
+.left-title {
+    text-align: left;
+}
+
+.left-title::after {
+    margin: 15px 0 0 0;   /* remove auto centering */
+}
 
 
 
